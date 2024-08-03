@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Rubik", sans-serif;
+  background-color: #eee;
+}
+
+.heading{
+  background-color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container{
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 1rem;
+}
+
+.notesdiv{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px ;
+}
+
+.notes{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px ;
+}
+
+.addNote{
+  position: relative;
+  width: 160px;
+  height: 140px;
+  background-color: #fff;
+  border: 3px dotted #ccc;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.note{
+  position: relative;
+  width: 160px;
+  height: 140px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.colorDiv{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 17px;
+  border-radius: 5px;
+}
+
+.colorDiv .color{
+  width: calc(100% / 6);
+  height: 100%;
+}
+
+
+.colorDiv .color:first-child{
+  border-top-left-radius: 5px;
+}
+
+.colorDiv .color:last-child{
+  border-top-right-radius: 5px;
+}
+
+.textnote {
+  width: 100%;
+  height: 100px;  
+  outline: none;
+  border: none;
+  padding: 8px;
+  resize: none; 
+  overflow: auto; 
+}
+
+.del{
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #111;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  transition: all 20s ease-in-out;
+}
+
+.note:hover .del{
+  display: block;
+}
+
+.addNote::after{
+  position: absolute;
+  content: "+";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 80px;
+  color: #eee;
+  cursor: pointer;
+}
+
+hr{
+  background-color: #ccc;
+  height: 2px;
+  border: none;
+  margin: 30px 0;
+}
+
+
+
+.colorStats .colorDiv{
+  padding: 15px;
+  background-color: #fff;
+  margin-bottom: 8px;
+}
+
+
+@media (max-width: 375px){
+  .notes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
